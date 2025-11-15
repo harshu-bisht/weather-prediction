@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Visualization (CSV)</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: linear-gradient(to right, #74ebd5, #ACB6E5); color: white; text-align: center; padding-top: 100px; }
+        select, button { padding: 10px; border-radius: 8px; border: none; margin: 5px; font-size: 16px; }
+        button { background-color: white; color: #2b5876; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>🌦 Weather Data Visualization (CSV)</h1>
+    <form method="POST">
+        <label for="city">Select City:</label>
+        <select name="city" required>
+            {% for city in cities %}
+                <option value="{{ city }}">{{ city }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Show Chart</button>
+    </form>
+</body>
+</html>
